@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { Typography } from "@material-ui/core"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -13,7 +14,7 @@ const BlogIndex = ({ data, location }) => {
     return (
       <Layout location={location} title={siteTitle}>
         <SEO title="All posts" />
-        <Bio />
+        {/* <Bio /> */}
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
           directory you specified for the "gatsby-source-filesystem" plugin in
@@ -26,7 +27,8 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <Bio />
+      {/* <Bio /> */}
+      <Typography variant="body1">Hello World</Typography>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug

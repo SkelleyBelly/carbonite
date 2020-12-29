@@ -1,17 +1,29 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `AND Carbonite`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Nathan Skelley`,
+      summary: `A handsome chap who likes to eat curry`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    // siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
   },
   plugins: [
+    {
+      resolve: `gatsby-theme-material-ui`,
+      options: {
+        webFontsConfig: {
+          fonts: {
+            google: [
+              {
+                family: `Montserrat`,
+                variants: [`300`, `400`, `500`],
+              },
+            ],
+          },
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
