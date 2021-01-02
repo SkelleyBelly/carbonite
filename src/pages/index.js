@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Box, Container, Grid } from "@material-ui/core"
+import { Container, Grid, Typography, Box } from "@material-ui/core"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import BlogCard from "../components/blogCard"
@@ -27,6 +27,24 @@ const BlogIndex = ({ data, location }) => {
       <SEO title="All posts" />
       <Container maxWidth="md">
         <Box my={8}>
+          <Box mb={4}>
+            <Typography variant="h4" gutterBottom>Welcome to Carbonite</Typography>
+            <Typography variant="body1" paragraph>
+              This is a space where we can all share our knowledge and
+              contribute to the collective capability of Turing. It's mission is
+              to create a single shared place where we can store what we
+              consider to be best practice, experiment and showcase new and
+              upcoming technologies, and provide examples that can easily be
+              used by other ANDis to provide outstanding experiences.
+            </Typography>
+            <Typography variant="body1">
+              This is very much a first draft to be used as an example, but if
+              you'd like to contribute, check out the <b>Contributor Guide</b>{" "}
+              blog entry or talk to <b>Nathan Skelley</b>, who maintains
+              Carbonite. To see where Carbonite intends to go next, check out{" "}
+              <b>Roadmap</b> blog entry.
+            </Typography>
+          </Box>
           <Grid container spacing={4}>
             {posts.map(post => (
               <Grid item xs={12}>

@@ -1,6 +1,6 @@
 import React from "react"
 import Header from "./header"
-import { Box, makeStyles, Typography } from "@material-ui/core"
+import { Box, makeStyles, Typography, Link } from "@material-ui/core"
 
 const useStyles = makeStyles(theme => ({
   body: {
@@ -23,9 +23,14 @@ const Layout = ({ location, title, children }) => {
         {children}
       </Box>
       <Box component="footer" className={classes.footer} py={6}>
-        <Box color='grey.600' clone>
+        <Box color="grey.600" clone>
           <Typography align="center">
-            Made with <span role="img" aria-label="love">❤️</span> for Turing by SkelleyBelly
+            Made with{" "}
+            <span role="img" aria-label="love">
+              ❤️
+            </span>{" "}
+            for Turing by{" "}
+            <Link href="https://github.com/SkelleyBelly" color="inherit">SkelleyBelly</Link>
           </Typography>
         </Box>
       </Box>
