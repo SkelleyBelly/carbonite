@@ -1,35 +1,35 @@
 import React from "react"
-import { Link } from "gatsby"
+import Header from "./header"
+import { Box, makeStyles, Typography } from "@material-ui/core"
+
+const useStyles = makeStyles(theme => ({
+  body: {
+    height: "100vh",
+    display: "flex",
+    flexDirection: "column",
+  },
+  footer: {
+    backgroundColor: theme.palette.grey[900],
+  },
+}))
 
 const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  const isRootPath = location.pathname === rootPath
-  let header
-
-  if (isRootPath) {
-    header = (
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
-    )
-  } else {
-    header = (
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
-    )
-  }
+  const classes = useStyles()
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
-      <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer>
-    </div>
+    <Box className={classes.body}>
+      <Header />
+      <Box component="main" flex="1 1 auto">
+        {children}
+      </Box>
+      <Box component="footer" className={classes.footer} py={6}>
+        <Box color='grey.600' clone>
+          <Typography align="center">
+            Made with <span role="img" aria-label="love">❤️</span> for Turing by SkelleyBelly
+          </Typography>
+        </Box>
+      </Box>
+    </Box>
   )
 }
 

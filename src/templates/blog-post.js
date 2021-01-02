@@ -1,14 +1,80 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import {
+  Container,
+  Divider,
+  Box,
+  makeStyles,
+  Typography,
+  Chip,
+} from "@material-ui/core"
+// Highlighting for code blocks
+import "prismjs/themes/prism-okaidia.css"
+
+const useStyles = makeStyles(theme => ({
+  post: {
+    "& h1": theme.typography.h1,
+    "& h2": theme.typography.h2,
+    "& h3": theme.typography.h3,
+    "& h4": theme.typography.h4,
+    "& h5": theme.typography.h5,
+    "& h6": theme.typography.h6,
+    "& p": theme.typography.body1,
+    "& a": {
+      color: theme.palette.secondary.main,
+      fontWeight: 700,
+      textDecoration: "none",
+    },
+    "& blockquote": {
+      margin: theme.spacing(10, 0),
+      borderLeft: `solid ${theme.palette.grey[400]} 6px`,
+      padding: theme.spacing(0, 3),
+      "& p": {
+        fontFamily: "Poppins",
+        fontSize: "1.1rem",
+        fontWeight: 700,
+        color: theme.palette.grey[600],
+        fontStyle: "italic",
+      },
+    },
+  },
+  buttonWrapper: {
+    display: `flex`,
+    flexWrap: `wrap`,
+    justifyContent: `space-between`,
+    listStyle: `none`,
+    padding: 0,
+  },
+  button: {
+    textDecoration: "none",
+    color: "white",
+    fontSize: "1.1rem",
+    fontWeight: 700,
+    fontFamily: "Poppins",
+    backgroundColor: theme.palette.secondary.main,
+    padding: theme.spacing(2),
+    borderRadius: theme.shape.borderRadius,
+    transition: theme.transitions.create("box-shadow"),
+    boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+    "&:hover": {
+      boxShadow: "rgba(100, 100, 111, 0.4) 0px 7px 29px 0px",
+    },
+  },
+  chip: {
+    margin: theme.spacing(0.5),
+    fontFamily: theme.typography.h6.fontFamily,
+  },
+}))
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
+  const tags = post.frontmatter.tags
+
+  const classes = useStyles()
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -16,50 +82,65 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article
-        className="blog-post"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
-        <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
-        </header>
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
-        <hr />
-        <footer>
-          <Bio />
-        </footer>
-      </article>
-      <nav className="blog-post-nav">
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
+      <Container maxWidth="md">
+        <Box my={4}>
+          <Box component="header" mb={6} textAlign="center">
+            <Box py={1} clone>
+              <Typography variant="h2" component="h1">
+                {post.frontmatter.title}
+              </Typography>
+            </Box>
+            <Box py={1} clone>
+              <Typography variant="body2" color="textSecondary">
+                {`${post.frontmatter.author} on ${post.frontmatter.date} - ${post.timeToRead} min read`}
+              </Typography>
+            </Box>
+            {tags && (
+              <Box mx={-0.5} py={1}>
+                {post.frontmatter.tags.map(tag => (
+                  <Chip
+                    size="small"
+                    label={tag}
+                    className={classes.chip}
+                    color="secondary"
+                  />
+                ))}
+              </Box>
             )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
+            <Divider light variant="middle" />
+          </Box>
+          <section
+            dangerouslySetInnerHTML={{ __html: post.html }}
+            className={classes.post}
+          />
+        </Box>
+        <Box component="nav" my={8}>
+          <ul className={classes.buttonWrapper}>
+            <li>
+              {previous && (
+                <Link
+                  to={previous.fields.slug}
+                  rel="prev"
+                  className={classes.button}
+                >
+                  ← {previous.frontmatter.title}
+                </Link>
+              )}
+            </li>
+            <li>
+              {next && (
+                <Link
+                  to={next.fields.slug}
+                  rel="next"
+                  className={classes.button}
+                >
+                  {next.frontmatter.title} →
+                </Link>
+              )}
+            </li>
+          </ul>
+        </Box>
+      </Container>
     </Layout>
   )
 }
@@ -85,7 +166,10 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        author
+        tags
       }
+      timeToRead
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
       fields {
