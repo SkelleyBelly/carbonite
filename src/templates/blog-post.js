@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
     "& h2": theme.typography.h2,
     "& h3": {
       ...theme.typography.h3,
-      borderBottom: "solid 1px rgba(0, 0, 0, 0.08)",
+      borderBottom: `solid 1px ${theme.palette.divider}`,
       paddingBottom: theme.spacing(1),
       marginBottom: theme.spacing(4)
     },
@@ -115,7 +115,7 @@ const BlogPostTemplate = ({ data, location }) => {
                 ))}
               </Box>
             )}
-            <Divider light variant="middle" />
+            <Divider variant="middle" />
           </Box>
           <section
             dangerouslySetInnerHTML={{ __html: post.html }}
