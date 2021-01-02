@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
       textDecoration: "none",
     },
     "& blockquote": {
-      margin: theme.spacing(10, 0),
+      margin: theme.spacing(5, 0),
       borderLeft: `solid ${theme.palette.grey[400]} 6px`,
       padding: theme.spacing(0, 3),
       "& p": {

@@ -1,7 +1,6 @@
 import React from "react"
 import Header from "./header"
 import { Box, makeStyles, Typography, Link } from "@material-ui/core"
-import { version } from "../../package.json"
 
 const useStyles = makeStyles(theme => ({
   body: {

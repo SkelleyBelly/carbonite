@@ -12,7 +12,7 @@ Before you set off, be aware that this guide describes only how to create blog p
 
 ### Creating New Blog Entries
 
-All blog entries live within the content/blog folder. to add a new blog post, just create a new sub-folder with an index.md file in it, and there you go, instant blog! From there, you can write in markdown and Gatsby will convert it into page for you. From within your markdown, you can use all the expected syntax (the section below will cover your options in more detail), and refer to other assets in your blog folder as well.
+All blog entries live within the content/blog folder. to add a new blog post, just create a new sub-folder with a markdown file in it, and there you go, instant blog! From there, you can write in markdown and Gatsby will convert it into page for you. From within your markdown, you can use all the expected syntax (the section below will cover your options in more detail), and refer to other assets in your blog folder as well.
 
 This means that a standard blog post with a few images might have a folder structure like this:
 
