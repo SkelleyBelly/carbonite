@@ -5,7 +5,7 @@ import { version } from "../../package"
 
 const useStyles = makeStyles(theme => ({
   body: {
-    height: "100vh",
+    minHeight: "100vh",
     display: "flex",
     flexDirection: "column",
   },
@@ -20,7 +20,7 @@ const Layout = ({ location, title, children }) => {
   return (
     <Box className={classes.body}>
       <Header />
-      <Box component="main" flex="1 1 auto">
+      <Box component="main" flex="1 1 auto" display="flex" flexDirection="column1">
         {children}
       </Box>
       <Box component="footer" className={classes.footer} py={6}>

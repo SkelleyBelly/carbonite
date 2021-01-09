@@ -3,15 +3,12 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Box, Container, makeStyles, Typography } from "@material-ui/core"
+import { Container, makeStyles, Typography } from "@material-ui/core"
 
 const useStyles = makeStyles({
   container: {
-    display: "flex",
-    flexDirection: "column",
     textAlign: 'center',
-    justifyContent: 'center',
-    height: '100%'
+    margin: 'auto'
   },
 })
 
