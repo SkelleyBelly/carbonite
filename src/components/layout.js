@@ -1,6 +1,7 @@
 import React from "react"
 import Header from "./header"
 import { Box, makeStyles, Typography, Link } from "@material-ui/core"
+import { version } from "../../package"
 
 const useStyles = makeStyles(theme => ({
   body: {
@@ -23,7 +24,7 @@ const Layout = ({ location, title, children }) => {
         {children}
       </Box>
       <Box component="footer" className={classes.footer} py={6}>
-        <Box color="grey.600" clone>
+        <Box color="grey.500" clone>
           <Typography align="center">
             Made with
             <span role="img" aria-label="love">
@@ -33,6 +34,11 @@ const Layout = ({ location, title, children }) => {
             <Link href="https://github.com/SkelleyBelly" color="inherit">
               {" SkelleyBelly"}
             </Link>
+          </Typography>
+        </Box>
+        <Box color="grey.600" clone>
+          <Typography align="center">
+            {`v${version}`}
           </Typography>
         </Box>
       </Box>

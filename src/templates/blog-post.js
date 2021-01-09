@@ -15,6 +15,13 @@ import "prismjs/themes/prism-okaidia.css"
 
 const useStyles = makeStyles(theme => ({
   post: {
+    "& *": {
+      ...theme.typography.body1,
+      fontWeight: undefined
+    },
+    "& li": {
+      margin: theme.spacing(3,0)
+    },
     "& h1": theme.typography.h1,
     "& h2": theme.typography.h2,
     "& h3": {
@@ -29,11 +36,13 @@ const useStyles = makeStyles(theme => ({
     },
     "& h5": theme.typography.h5,
     "& h6": theme.typography.h6,
-    "& p": theme.typography.body1,
     "& a": {
       color: theme.palette.secondary.main,
       fontWeight: 700,
       textDecoration: "none",
+    },
+    "& code":{
+      padding: `0.2em 0.4em !important`
     },
     "& blockquote": {
       margin: theme.spacing(5, 0),
@@ -47,6 +56,10 @@ const useStyles = makeStyles(theme => ({
         fontStyle: "italic",
       },
     },
+    "& .gatsby-resp-image-wrapper":{
+      boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
+      maxWidth: 'none'
+    }
   },
   buttonWrapper: {
     display: `flex`,
