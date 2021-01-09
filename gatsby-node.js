@@ -107,7 +107,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       title: String!
       description: String!
       date: Date! @dateformat
-      author: String!
+      author: [String!]!
       inProgress: Boolean
       type: String!
       tags: [String]

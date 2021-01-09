@@ -2,7 +2,7 @@
 title: "Carbonite: Contributor Guide"
 date: "2021-01-02"
 description: "A guide for contributors to create new blog entries"
-author: Nathan Skelley
+author: [Nathan Skelley]
 type: Guide
 ---
 

@@ -55,7 +55,7 @@ const BlogIndex = ({ data, location }) => {
                   date={post.frontmatter.date}
                   timeToRead={post.timeToRead}
                   description={post.frontmatter.description || post.excerpt}
-                  author={post.frontmatter.author}
+                  author={post.frontmatter.author.join(', ')}
                   inProgress={post.frontmatter.inProgress}
                   tags={post.frontmatter.tags}
                   type={post.frontmatter.type}

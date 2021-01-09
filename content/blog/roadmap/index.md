@@ -2,7 +2,7 @@
 title: "Carbonite: Roadmap"
 date: "2021-01-02"
 description: "Some ideas for how Carbonite could be improved to make it more useful for ANDis"
-author: Nathan Skelley
+author: [Nathan Skelley]
 type: Guide
 ---
 

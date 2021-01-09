@@ -2,7 +2,7 @@
 title: How Carbonite v0.1 was built
 date: "2021-01-08"
 description: Rome wasn't built in a day, but Carbonite v0.1 was. How? Because getting started with Gatsby and building a simple blog platform is really easy with the open source tools we have available today. This guide will explain what came out of the box, and required a little bit more work (if tinkering while watching Christmas movies is considered as work).
-author: Nathan Skelley
+author: [Nathan Skelley]
 type: Blog
 tags: ['Carbonite', 'Gatsby', 'Material UI', 'GraphQL']
 ---

@@ -2,7 +2,7 @@
 title: Cleaner HTML with Material UI's Box Clone Ability
 date: "2021-01-10"
 description: "A quick dive into the Clone ability of Material UI's versatile Box component, which gives us all the superpower of Box with less of the HTML."
-author: Nathan Skelley
+author: [Nathan Skelley]
 type: Blog
 tags: ['Frontend', 'Material UI']
 ---
