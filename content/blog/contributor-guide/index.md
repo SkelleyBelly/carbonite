@@ -40,6 +40,27 @@ author: Nathan Skelley
 type: Guide
 ```
 
+
+#### Creating In-Progress Entries
+
+One of the core ideas behind Carbonite is to give us the ability to see what other members of the club are working on, so that we can either contribute our own understanding to their research or get involved directly. To facilitate this, Carbonite blog posts can be defined as "In-Progress" via their Frontmatter.
+
+As an example, here is a blog entry that is in-progress:
+
+```md
+title: Lerna Monorepo Template
+date: "2021-01-09"
+description: "A quick-start template to create a Lerna monorepo that provides component, client and micro-service packages, using Hasura to provide a GraphQL data source"
+author: [Nathan Skelley]
+type: In Progress
+tags: ['Lerna', 'GraphQL', 'Apollo', 'Hasura', 'Lerna', 'Monorepo']
+inProgress: true
+```
+
+The `inProgress` key will make it appear on the index page in a disabled state (In-progress blog entries only appear here, as they are filtered out of the `createPages` stage during the Gatsby build process)
+
+![In-Progress Blog Entry](./in-progress-entries.png)
+
 ### Markdown Syntax
 
 Below are examples of the Markdown syntax. 
