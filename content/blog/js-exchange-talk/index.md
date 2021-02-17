@@ -19,12 +19,12 @@ There are various reasons why it is a good idea to talk at events like this. The
 ##### Benefits for AND:
 We have some of the leading minds in software development here at AND, but we are very "internal". We have such an active and extensive internal community that we often choose to have our Techy Discussions just between ourselves. This is great for upskilling ANDis but means that we are very quiet on external forums, blogs and meetups.. Nobody knows about us. We can change that by speaking at these sorts of events.
 
-Speaking at these events and growing the company's "eminence" has many obvious benefits including more and better choice of both clients and talent as well as gaining recogition for the amazing work that we do. 
+Speaking at these events and growing the company's "eminence" has many obvious benefits including more and better choice of both clients and talent as well as gaining recognition for the amazing work that we do. 
 
 ##### Benefits for the Client:
 In order to get buy-in from the client, it's really important that they understand how they benefit from you doing this talk. You need to be able convince them that enabling you to talk about their project in an external forum is a good idea.
 
-One of the main drivers in my talk was Developer Hiring. At AND we are often building in house development capability at the same time as building a solution. One of the best ways to attract talent to the clients organisation is to show off the new and amazing technology we are developing or the amazing developer experience we are creating in the Client's organisation.
+One of the main drivers in my talk was Developer Hiring. At AND we are often building in house development capability at the same time as building a solution. One of the best ways to attract talent to the client's organisation is to show off the new and amazing technology we are developing or the amazing developer experience we are creating in the client's organisation.
 
 But there are other reasons too! Any publicity is good publicity right? A client might be happy that you are showcasing the digital transformation they are going through, or the planned or delivered improvements to their service or website.
 
@@ -43,7 +43,7 @@ So how did I do it? Here I will outline the steps I took when preparing for the 
 1. I did a dry run with audience type. In my case I played back to some friendly faces in AND making sure the content was relevant and interesting to the developer audience I was presenting to
 1. I did a couple more rounds of playbacks refining, designing and iterating until all parties are happy
 1. Then it was time to inject some style and branding. Mel, ANDs Events Coordinator gave some great advice on ensuring slides looked great and were on brand ready for the big stage
-1. Remembered to breath, smile and tried my best to speak slowly :) 
+1. Remembered to breathe, smile and tried my best to speak slowly :) 
 
 #### Lessons Learnt
 Some lessons that I learned along the way and some thing I would like to improve after looking back the recording:
@@ -54,7 +54,7 @@ Some lessons that I learned along the way and some thing I would like to improve
 
 1. The power of the pause, when I was doing my talk I thought I was going really slowly, when watching it back maybe it was not slow enough. Good to be mindful that you know your content really well, but for those watching, its the first time they are seeing/hearing it. Especially with Technical topics it's not always easy to grasp and understand everything in a matter of seconds so, take a breath, pause, let what you are saying sink in.
 
-1. Silence is golden.. A lot of us do it.. Urrrmmm, and urrrr, yeahh, sooooo.. All these ways that our brain tries to fill empty gaps in speech with some irrelevant sound. If you think about it this actually makes you much harder to understand; it interrupts the audience's thinking, it doesn't give them those gaps to process information but also it devalues the good things you do say.. Subliminaly they know that not everything that come out of your mouth is worth listening to. If I was able to reduce or eliminate these noises then, as with the best storytellers, the audience would start to hang on every word. 
+1. Silence is golden.. A lot of us do it.. Urrrmmm, and urrrr, yeahh, sooooo.. All these ways that our brain tries to fill empty gaps in speech with some irrelevant sound. If you think about it this actually makes you much harder to understand; it interrupts the audience's thinking, it doesn't give them those gaps to process information but also it devalues the good things you do say.. Subliminally they know that not every word you say is worth listening to. If I was able to reduce or eliminate these noises then, as with the best storytellers, the audience would start to hang on every word. 
 
 1. Plant a question. We've all been there.. Are there any questions? ...tumbleweed... Best to pre-empt this by planting an ANDi in the audience with a question just in case. Also make sure that ANDi turns up (@Rufus)
 
