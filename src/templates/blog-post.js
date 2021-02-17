@@ -59,6 +59,25 @@ const useStyles = makeStyles(theme => ({
     "& .gatsby-resp-image-wrapper":{
       boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
       maxWidth: 'none'
+    },
+    "& .centeredContainer": {
+      width: '100%',
+      display: 'flex',
+      justifyContent: 'center',
+    },
+    "& table": {
+      alignSelf: 'center',
+      borderCollapse: 'collapse',
+      margin: '50px auto',
+      "& th": {
+        backgroundColor: theme.palette.secondary.main,
+        padding: '0 20px',
+        color: "white",
+        border: `solid 1px ${theme.palette.divider}`
+      },
+      "& td": {
+        border: `solid 1px ${theme.palette.divider}`
+      }
     }
   },
   buttonWrapper: {
