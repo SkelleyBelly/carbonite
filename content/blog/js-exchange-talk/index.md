@@ -1,55 +1,63 @@
 ---
-title: "Speaking at the JavaScript Exchange"
+title: "Titan JavaScript Exchange Talk"
 date: "2021-01-28"
-description: "Recap on Sam's JS Exchange Exchange Event Talk and how he went about it"
+description: "In January 2021 I spoke on the JavaScript Exchange talking about our plans for the new Titan Travel website. In this blog I share a brief synopsis on why I did it, how I did it and some of the lessons I learnt along the way"
 author: [Sam Hopkins]
 type: Blog
-tags: ['JavaScript', Public Speaking]
+tags: [Public Speaking]
 ---
 
-### Introduction
+![JSX Poster](./jsx_poster.png)
+
+#### Introduction
 On 28/01/21 I spoke on the [JavaScript Exchange](https://www.linkedin.com/company/javascript-exchange/) - "A Community Meetup dedicated to bringing together JavaScript Developers to discuss all things JS"
 
-In the following blog I'm going to quickly tell you about the reasons why you might want to do something similar for your client or yourself. I will also include information on how I went about it and the prequisute steps to ensure you have the support from both AND as well as you client.
-
-### The Why
+In this blog I share a brief synopsis on why I did it, how I did it and some of the lessons I learnt along the way. 
+#### The Why
 There are various reasons why it is a good idea to talk at events like this. These mainly fall into the following 3 categories..
 
-## Benefits for AND:
-We have some of the leading minds in software development here at AND, but we are very "internal". We have such an active and extensive internal community that we often choose to have our Techy Discussions just between ourselves. This is great for upskilling ANDis but means that we are very quiet on external forums, blogs and meetups.. Nobody knows about us. We can change that by speaking at these events.
+##### Benefits for AND:
+We have some of the leading minds in software development here at AND, but we are very "internal". We have such an active and extensive internal community that we often choose to have our Techy Discussions just between ourselves. This is great for upskilling ANDis but means that we are very quiet on external forums, blogs and meetups.. Nobody knows about us. We can change that by speaking at these sorts of events.
 
-Speaking at these events and growing the company's "eminence" has many obvious benefits including more and better choice of clients, acquisition of talent and more recongition for the amazing work that we do. 
+Speaking at these events and growing the company's "eminence" has many obvious benefits including more and better choice of both clients and talent as well as gaining recogition for the amazing work that we do. 
 
-## Benefits for the Client:
-This is a really key one in terms of being able to speak at one of these events about client work. You need to be able convince the client that allowing you to talk about their project in an external forum is a good idea.
+##### Benefits for the Client:
+In order to get buy-in from the client, it's really important that they understand how they benefit from you doing this talk. You need to be able convince them that enabling you to talk about their project in an external forum is a good idea.
 
-One of the main drivers in my talk was Developer Hiring. At AND we are often building in house dev capability at the same time as building a solution. One of the best ways to attract talent is to show off the new and amazing technology we are developing or the amazing developer experience we are creating in the Client's organisation.
+One of the main drivers in my talk was Developer Hiring. At AND we are often building in house development capability at the same time as building a solution. One of the best ways to attract talent to the clients organisation is to show off the new and amazing technology we are developing or the amazing developer experience we are creating in the Client's organisation.
 
-But there are othe reasons too! Any publicity is good publicity right? A client might be happy that you are showcasing the digital transformation they are going through, or the planned/delivered improvements to their service/web site.
+But there are other reasons too! Any publicity is good publicity right? A client might be happy that you are showcasing the digital transformation they are going through, or the planned or delivered improvements to their service or website.
 
-## Benefits to you!
-On top of all of this going the extra mile to do this work could have some real benefits to your own career and personal development. I personally learned a lot from this experience. I'm not going to lie it wasn't easy and some late nights were spent perfecting my slides however, I know that next time I am speaking in a public forum, voluntarily or as part of my job, things will be a lot easier
+##### Benefits to you!
+On top of all of this, going the extra mile to do this work could have some real benefits to your own career and personal development. I personally learned a lot from this experience. I'm not going to lie, it wasn't easy and I did spend some late nights perfecting my slides. But next time, whether I am speaking in a public forum voluntarily or as part of my job, I'll have learned some lessons and things will be easier.
 
-### How
-So how did I do it? Here I will outline some things you MUST/SHOULD/COULD do before speaking at an event like this:
+Another thing to mention is that it's great to be able to speak about client work that you are already doing, rather than having to come up with something else to talk about at one of these events. We are doing all this amazing project work for the client, this is a way to make the project work for you!
 
-1. MUST Get sign off from AND this includes both Service Delivery Team and AND Events Coordinator (Mel) in Tenzing
-1. MUST Get buy in from the Client, ask Service Delivery for help/advice for how to obtain this
-1. Create draft slides - not too much detail, they will change a lot!
-1. Dry run/playback with Service Delivery Team and AND Events Coordinator (iterate/absorb changes)
-1. Dry run/playback with client, make sure you frame it in a way where you are asking for their input
-1. Dry run with audience type. My audience was developers so before finalising the content I played back to some friendly faces in AND to make sure the content was relevant
-1. Refine/Design/Iterate through all of the steps above
-1. All parties are happy with the slide content its time to inject some style branding. Ask for AND Events Coordinator for advice on ensuring your slides are ready for the big stage
-1. Breath, smile and perform! :) 
+#### The How
+So how did I do it? Here I will outline the steps I took when preparing for the talk:
 
-### Lessons Learnt
-On the whole I was happy with how it went. I was very happy until I watched the full recording haha but you are your worst critic so some of the things I would try to improve for next time
+1. I created draft slides with limited detail, just enough to explain the flow of my presentation
+1. I talked with both the Client Service Delivery Team and AND Events Coordinator (Melinder Elfield) in Tenzing to get their input and their agreement to proceed
+1. I went about getting buy-in from Client stakeholders, Service Delivery were a great help here to find the best way to go about appeal to them
+1. Once the slide structure was agreed, I tidied up and added more content and details to the slides
+1. I did a dry run with audience type. In my case I played back to some friendly faces in AND making sure the content was relevant and interesting to the developer audience I was presenting to
+1. I did a couple more rounds of playbacks refining, designing and iterating until all parties are happy
+1. Then it was time to inject some style and branding. Mel, ANDs Events Coordinator gave some great advice on ensuring slides looked great and were on brand ready for the big stage
+1. Remembered to breath, smile and tried my best to speak slowly :) 
 
-1. The power of the pause, when I was doing my talk I thought I was going really slowly, on reflection maybe not enough. Remember, you know your content really well, for those watching its the first time they are seeing it. Technical topics are not that easy to grasp in a matter of seconds
-1. Silence is golden.. We all do it.. Urrrmmm, Urghhh, yes like.. All the ways our brain tries to fill empty gaps while talking with irrelevant sound. This actually makes you much harder to understand as it interrupts the audience's thinking
-1. Plant a question. We've all been there.. Are there any questions? `tumbleweed(20s)`. Best to pre-empt that by planting an ANDi in the audience with a question just in case
+#### Lessons Learnt
+Some lessons that I learned along the way and some thing I would like to improve after looking back the recording:
 
-### Have a look
+1. Stay high level when talking about client's existing systems. First time I pitched this to the client it missed it's mark, this was because I went into too much detail regarding pain points and problems with their current website. Better to focus on the new amazing stuff you will build rather than the old stuff it will replace.
 
-You can view the talk [here](https://www.linuxrecruit.co.uk/blog?title=JSX%20January%20feat%20IBM%20%26%20AND%20Digital&id=163). (please don't judge me to harshly)
+1. Playback the slides to lots of different people before the final presentation. Each different perspective helped improve my presentation and also allowed me to practice what I was going to say, meaning that I was more relaxed and confident on game day.
+
+1. The power of the pause, when I was doing my talk I thought I was going really slowly, when watching it back maybe it was not slow enough. Good to be mindful that you know your content really well, but for those watching, its the first time they are seeing/hearing it. Especially with Technical topics it's not always easy to grasp and understand everything in a matter of seconds so, take a breath, pause, let what you are saying sink in.
+
+1. Silence is golden.. A lot of us do it.. Urrrmmm, and urrrr, yeahh, sooooo.. All these ways that our brain tries to fill empty gaps in speech with some irrelevant sound. If you think about it this actually makes you much harder to understand; it interrupts the audience's thinking, it doesn't give them those gaps to process information but also it devalues the good things you do say.. Subliminaly they know that not everything that come out of your mouth is worth listening to. If I was able to reduce or eliminate these noises then, as with the best storytellers, the audience would start to hang on every word. 
+
+1. Plant a question. We've all been there.. Are there any questions? ...tumbleweed... Best to pre-empt this by planting an ANDi in the audience with a question just in case. Also make sure that ANDi turns up (@Rufus)
+
+#### See for yourself:
+
+You can view the talk [here](https://www.linuxrecruit.co.uk/blog?title=JSX%20January%20feat%20IBM%20%26%20AND%20Digital&id=163)
