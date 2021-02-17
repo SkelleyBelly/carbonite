@@ -61,3 +61,7 @@ Some lessons that I learned along the way and some thing I would like to improve
 #### See for yourself:
 
 You can view the talk [here](https://www.linuxrecruit.co.uk/blog?title=JSX%20January%20feat%20IBM%20%26%20AND%20Digital&id=163)
+
+#### Do for yourself:
+
+Interested in doing something similar? If you would like to talk on one of these JS Exchange Events feel free to reach out to me (Sam Hopkins) or directly to [Jessica](https://www.linkedin.com/in/jessicahrose/), one of the organisers of the JS Exchange meetups.
