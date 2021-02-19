@@ -52,11 +52,11 @@ Some lessons that I learned along the way and some thing I would like to improve
 
 1. Playback the slides to lots of different people before the final presentation. Each different perspective helped improve my presentation and also allowed me to practice what I was going to say, meaning that I was more relaxed and confident on game day.
 
-1. The power of the pause, when I was doing my talk I thought I was going really slowly, when watching it back maybe it was not slow enough. Good to be mindful that you know your content really well, but for those watching, its the first time they are seeing/hearing it. Especially with Technical topics it's not always easy to grasp and understand everything in a matter of seconds so, take a breath, pause, let what you are saying sink in.
+1. The power of the pause, when I was doing my talk I thought I was going really slowly, when watching it back maybe it was not slow enough. Good to be mindful that you know your content really well, but for those watching, its the first time they are seeing/hearing it. Especially with Technical topics it's not always easy to grasp and understand everything in a matter of seconds. Next time I will find a way to remind myself to consciously take a breath, pause, and let what I am saying sink in.
 
-1. Silence is golden.. A lot of us do it.. Urrrmmm, and urrrr, yeahh, sooooo.. All these ways that our brain tries to fill empty gaps in speech with some irrelevant sound. If you think about it this actually makes you much harder to understand; it interrupts the audience's thinking, it doesn't give them those gaps to process information but also it devalues the good things you do say.. Subliminally they know that not every word you say is worth listening to. If I was able to reduce or eliminate these noises then, as with the best storytellers, the audience would start to hang on every word. 
+1. Silence is golden.. A lot of us do it.. Urrrmmm, and urrrr, yeahh, sooooo.. All these ways that our brain tries to fill empty gaps in speech with some irrelevant sound. If you think about it, this actually makes you much harder to understand; it interrupts the audience's thinking, it doesn't give them those gaps to process information but also it devalues the good things you do say.. Subliminally they know that not everything you say is worth listening to. If I was able to reduce or eliminate these noises then, as with the best storytellers, I could get the audience to start to hanging on each word. 
 
-1. Plant a question. We've all been there.. Are there any questions? ...tumbleweed... Best to pre-empt this by planting an ANDi in the audience with a question just in case. Also make sure that ANDi turns up (@Rufus)
+1. Plant a question. We've all been there.. Are there any questions? ...tumbleweed... Best to pre-empt this by planting an ANDi in the audience with a question just in case.
 
 #### See for yourself:
 
