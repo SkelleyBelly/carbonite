@@ -1,7 +1,7 @@
 ---
 title: How we estimated 484 Titan Travel Trello Tickets
 date: "2021-02-16"
-description: At Titan Travel we had a big scope for our discovery phase. We were asked to create a roadplan with time estimates for a fully greenfield website rebuild of their existing website. In this article I walk you through how we managed it using a useful plugin and some Excel magic.
+description: At Titan Travel we had a big scope for our discovery phase. We were asked to create a roadplan with time estimates for a fully greenfield rebuild of their existing website. In this article I walk you through how we managed it using a useful plugin and some Excel magic.
 author: [Sam Hopkins]
 type: Blog
 tags: ['Estimating', Project Management]
@@ -15,7 +15,7 @@ In this quick read I am going to walk you through how we did this. I hope this w
 #### How we did it:
 
 1. **Captured requirements in Trello:**
-We found Trello the easiest and quickest tool for us to capture requirements in. It's flexible and simple to use and easy to gain access to, which is not always easy at the start of a project. We talked to users, business stakeholders as well the internal content management team in order to gather these requirements.
+We found Trello the easiest and quickest tool for us to capture requirements in. It's flexible and simple to use and easy to gain access to, which is not always easy at the start of a project. We talked to users and business stakeholders as well the internal content management team in order to gather these requirements.
 
 1. **Labels:** labels on the Trello Tickets were the key to sorting the tickets, we added labels for:
     
@@ -55,11 +55,11 @@ This [CSV Export for trello](https://chrome.google.com/webstore/detail/csv-expor
 
 ![Estmations Table](estimate_example.png)
 
-7. **Factor in Contingency for unknowns:** We were never going to capture all the tickets in this discovery phase. As I am sure you have all experienced you are always uncovering more tickets during delivery. After speaking to Service Delivery, 35% is a tried tested percentage contingency to in odered to account for these unknowns
+7. **Factor in Contingency for unknowns:** We were never going to capture all the tickets in this discovery phase. As I am sure you have all experienced you are always uncovering more tickets during delivery. After speaking to Service Delivery, 35% is a tried and tested percentage contingency to in odered to account for these unknowns
 
 7. **Working out a usable total:** So now you have a range of total dev days. But we need to try and get to the most reliable timeframe we can. To do this we first took an average of this best and worst case scenario and then started break it down into real time.
     - First we divide by number of developers. We only counted myself, as tech lead, as 1/2 a developer. I needed to make sure I have time to be able to support other developers and as well as attend neccessary meetings
-    - Then we broke down the nubmers into real days. We say that a month is 18 days as this factors in vacations and illnesses
+    - Then we broke down the numbers into real days. We say that a month is 18 days as this factors in vacations and illnesses
 
 ![Totals Table](totals.png)
 
