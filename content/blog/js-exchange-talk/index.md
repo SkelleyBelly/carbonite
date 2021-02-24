@@ -14,7 +14,7 @@ On 28/01/21 I spoke on the [JavaScript Exchange](https://www.linkedin.com/compan
 
 In this blog I share a brief synopsis on why I did it, how I did it and some of the lessons I learnt along the way. 
 #### The Why
-There are various reasons why it is a good idea to talk at events like this. These mainly fall into the following 3 categories..
+There are various reasons why it is a good idea to talk at events like this. These mainly fall into the following 3 categories:
 
 ##### Benefits for AND:
 We have some of the leading minds in software development here at AND, but we are very "internal". We have such an active and extensive internal community that we often choose to have our Techy Discussions just between ourselves. This is great for upskilling ANDis but means that we are very quiet on external forums, blogs and meetups.. Nobody knows about us. We can change that by speaking at these sorts of events.
@@ -40,13 +40,22 @@ So how did I do it? Here I will outline the steps I took when preparing for the 
 1. I talked with both the Client Service Delivery Team and AND Events Coordinator (Melinder Elfield) in Tenzing to get their input and their agreement to proceed
 1. I went about getting buy-in from Client stakeholders, Service Delivery were a great help here to find the best way to go about appeal to them
 1. Once the slide structure was agreed, I tidied up and added more content and details to the slides
-1. I did a dry run with audience type. In my case I played back to some friendly faces in AND making sure the content was relevant and interesting to the developer audience I was presenting to
-1. I did a couple more rounds of playbacks refining, designing and iterating until all parties are happy
+1. A quick dry run through with the audience type. In my case I played back to some friendly faces in AND making sure the content was relevant and interesting to the developer audience I was presenting to
+1. A couple more rounds of playbacks refining, designing and iterating until all parties are happy
 1. Then it was time to inject some style and branding. Mel, ANDs Events Coordinator gave some great advice on ensuring slides looked great and were on brand ready for the big stage
 1. Remembered to breathe, smile and tried my best to speak slowly :) 
 
+######Here's how some of the slides ended up:
+
+I did my best to:
+- keep them consistent
+- make them relevant to techies
+- use diagrams when possible
+
+![Some slides](all_slides.png)
+
 #### Lessons Learnt
-Some lessons that I learned along the way and some thing I would like to improve after looking back the recording:
+Some lessons that I learned along the way and some things I would like to improve after looking back the recording:
 
 1. Stay high level when talking about client's existing systems. First time I pitched this to the client it missed it's mark, this was because I went into too much detail regarding pain points and problems with their current website. Better to focus on the new amazing stuff you will build rather than the old stuff it will replace.
 
@@ -61,6 +70,7 @@ Some lessons that I learned along the way and some thing I would like to improve
 #### See for yourself:
 
 You can view the talk [here](https://www.linuxrecruit.co.uk/blog?title=JSX%20January%20feat%20IBM%20%26%20AND%20Digital&id=163)
+You can view the slides [here](https://docs.google.com/presentation/d/1_JMtprvzUphXml45hJNL0YyQWdYTWtMHIKQXiOi6V2o/edit?usp=sharing)
 
 #### Do for yourself:
 
