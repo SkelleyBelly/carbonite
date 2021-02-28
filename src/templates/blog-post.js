@@ -22,6 +22,9 @@ const useStyles = makeStyles(theme => ({
     "& li": {
       margin: theme.spacing(3,0)
     },
+    "& img": {
+      maxWidth: '100%'
+    },
     "& h1": theme.typography.h1,
     "& h2": theme.typography.h2,
     "& h3": {
@@ -77,7 +80,7 @@ const useStyles = makeStyles(theme => ({
       },
       "& td": {
         border: `solid 1px ${theme.palette.divider}`
-      }
+      },
     }
   },
   buttonWrapper: {
