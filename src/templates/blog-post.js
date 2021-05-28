@@ -45,7 +45,8 @@ const useStyles = makeStyles(theme => ({
       textDecoration: "none",
     },
     "& code":{
-      padding: `0.2em 0.4em !important`
+      padding: `0.1em 0.4em !important`, 
+      fontSize: '0.9em !important'
     },
     "& blockquote": {
       margin: theme.spacing(5, 0),
