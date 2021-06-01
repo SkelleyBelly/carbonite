@@ -7,7 +7,7 @@ type: Blog
 tags: ['React', 'TypeScript', 'Good Practice']
 ---
 
-After a year of building with TypeScript and React on a client engagement, it should come as no surprise that there are things I wish I knew at the beginning of the project - some things that I would have liked to do more of, and some things I wish I'd never done in the first place. This post is a retrospective of my time with React and TypeScript, and includes some warnings of the patterns I'll definitely be avoiding in the future, and some that I think are wonderful and should be encouraged.
+After a year of building with TypeScript and React on a client engagement, it should come as no surprise that there are a few things I wish I knew at the beginning of the project - some things that I would have liked to do more of, and some things I wish I'd never done in the first place. This post is a retrospective of my time with React and TypeScript, and includes some warnings of the patterns I'll definitely be avoiding in the future, and some that I think are wonderful and should be encouraged.
 
 Broadly, the goals of this guide can be summed up as the following:
 
@@ -22,6 +22,30 @@ I could go on forever about TypeScript and React good practice, and different wa
 - **Project Setup**: How I would set up a brand new React and TypeScript project if I had complete creative control
 - **Component Structure**: Guidance and design patterns that I would encourage when creating new components in a project
 - **Props**: My personal rules for creating component interfaces that are easy to use, and even easier to understand
+
+### TLDR
+
+I get it. You're busy. Here's the Cliff's notes. For those with a little more time, read on for the full breakdown of each rule.
+
+- **Project Setup**
+  - Perform strict null checks
+  - Introspect your data sources
+  - Check your code compiles on commit
+  - Make the most of Storybook
+- **Component Structure**
+  - Call hooks at the top of your component
+  - Make the most of hooks to share logic
+  - Use JSDoc comments to document as you go
+  - Keep your code declarative, and avoid configuration objects where possible
+- **Props**
+  - Avoid tying your props to a data source
+  - Types should flow from children to parents, never the other way around
+  - Give your interfaces consistent and descriptive names
+  - Avoid defining interfaces inline
+  - Name your props consistently and within context
+  - Be aware of optional props (especially if not null checking)
+  - Use React.ComponentProps
+  - Make the most of keyof, typeof and const
 
 
 ### Project Setup
@@ -50,7 +74,7 @@ Enable strict checks in your `tsconfig` compiler options like this:
 
 ##### Introspect your data sources
 
-If your application is recieving data from an external data source, then introspecting the schema to generate types to use in development can save a lot of time, as well as give you the added confidence of know exactly what your data looks like. This process involves converting the schema of the remote source into types and interfaces that can be stored locally and used in your local compilation. It is possible to manually maintain a types file, and this could be a better option if the remote schemas are very limited, but for larger sources introspecting is the way to go.
+If your application is recieving data from an external data source, then introspecting the schema to generate types to use in development can save a lot of time, as well as give you the added confidence of knowing exactly what your data looks like. This process involves converting the schema of the remote source into types and interfaces that can be stored locally and used in your local compilation. It is possible to manually maintain a types file, and this could be a better option if the remote schemas are very limited, but for larger sources introspecting is the way to go.
 
 There are lots of different libraries that can do this, but 2 commonly used and well maintained ones are [GraphQL Code Generator](https://www.graphql-code-generator.com/) (for GraphQL endpoints), and [Open API Generator](https://github.com/OpenAPITools/openapi-generator) (for REST endpoints that follow the Open API standard).
 
@@ -202,14 +226,14 @@ const GreenView = () => {
 
 const BlueView = () => {
   const { data } = useQuery(blueQuery);
-  const props = useConsistentLogic(greenLogic(data));
+  const props = useConsistentLogic(blueLogic(data));
 
   return <Component {...props}/>
 }
 
 const RedView = () => {
   const { data } = useQuery(redQuery);
-  const props = useConsistentLogic(greenLogic(data));
+  const props = useConsistentLogic(redLogic(data));
 
   return <Component {...props}/>
 }
@@ -281,15 +305,17 @@ A simple example of this could be some kind of dropdown menu that contains optio
 </Dropdown>
 ```
 
-The second option is easier to read as it follows the kind of standard JSX pattern that we're used to seeing in the rest of our code. It's also clear to see the separation between each option and how the component is assembled. In this case, the `children` of the `Dropdown` component have been used, but it's also possible to use other props to supply more complex configurations if required. Because we're just using standard JSX syntax, it's also easy to keep everything type-safe, as we're only ever dealing with a single interface at a time, so we can adjust the children to suit our needs.
+The second option is easier to read as it follows the kind of standard JSX pattern that we're used to seeing in the rest of our code. It's also clear to see the separation between each option and how the component is assembled. In this case, the `children` of the `Dropdown` component have been used, but it's also possible to use other props to supply more complex configurations if required. Because we're just using standard JSX syntax, it's also easier to keep everything type-safe, as we're only ever dealing with a single interface at a time, so we can adjust the children to suit our needs.
 
 It's also worth noting that in the example above, the gains were fairly minimal, because the object format was very simple, but configurations can potentially become incredibly complicated, with multiple nestings and different variations required. In those cases, it becomes substantially easier to work with declarative code as it's easier to break the problem up into smaller pieces.
 
-By using more advanced React patterns (such as utilising `React.children` or **Compound Components**, which won't be discussed here), it's possible to create incredibly flexible, reusable logic, that's still easy to read and extend, like this complex form example:
+By using more advanced React patterns (such as utilising `React.children` or **Compound Components**, which won't be discussed here), it's possible to create incredibly flexible, reusable logic, that's still easy to read and extend.
+
+The form example below shows how a complex component, with schema validation and multiple pages could be expressed using a declarative syntax:
 
 ```tsx
 <Form
-  initialValues={[initialValues, initialValues]}
+  initialValues={[nitialValues}
   cancelModalText={cancelModalText}
   handleClose={handleClose}
   title="The Ice Cream Form"
@@ -469,7 +495,7 @@ const Child = ({ onSelect, name, url }) => {
 
 In this example, the functionality and type dependencies of the components are confused. Components can be dependent on other component's types if they are also dependent on their functionality, but in this case they are exclusive: they are either connected by type or functionality, which makes no sense.
 
-If you create a component (like the Parent) that relies on the functionality of another component, you can consume the types from that child to reduce repetition, but it only flow up to consuming components. Child components should be unaware of the context in which they are used, and so should not be linked to either functionality or types.
+If you create a component (like the Parent) that relies on the functionality of another component, you can consume the types from that child to reduce repetition, but types should only flow up to consuming components. Child components should be unaware of the context in which they are used, and so should not be linked to either functionality or types.
 
 ```tsx
 // the Parent component is dependent on the types of the Child component
@@ -510,6 +536,15 @@ Naming is hard, so keep it simple, and steal from a good library if you have to.
 
 When creating interfaces for components (i.e. props), just use the system `${ComponentName}Props`. For example, if you're creating a component called `Input`, then call the corresponding interface declaration `InputProps`. It's simple and descriptive.
 
+```tsx
+interface InputProps {
+  value: string;
+  onChange: (value: string) => void;
+}
+
+const Input = ({ value, onChange }: InputProps) => {...}
+```
+
 When creating interfaces for pure functions, you may want to have a little more flexibility, as depending on how you intend to call the function it may make sense to name them different things. For example, you may have some concrete types and an options object that you may import from somewhere else.
 
 ```tsx
@@ -528,7 +563,7 @@ const myFunction = (name: string, user: User, options: MyFunctionOptions) => {
 
 ##### Avoid defining interfaces inline
 
-Avoiding interfaces inline is possible, but it doesn't make for the most readable code, and it's better to be consistent in how you define things.
+Avoiding interfaces inline is possible. It doesn't make for the most readable code, and it's better to be consistent in how you define things. If you know that every time you open a component file that the interface will be defined first, followed by the component itself, then it'll be much easier to find your way around the code.
 
 ```tsx
 // this is concise, but it's not very nice to read, and it can be difficult to tell the difference between
@@ -545,7 +580,7 @@ const User = ({ fullName, profileUrl }: {
 }
 
 
-// this is much nicer and easier to read and you can also reuse the interface if you need to
+// this is much easier to read and you can also reuse the interface if you need to
 interface UserProps {
   fullName: string;
   profileUrl: string;
@@ -562,7 +597,7 @@ const User = ({ fullName, profileUrl }: UserProps ) => {
 
 ##### Name your props consistently and within context
 
-Naming props is oddly one of the hardest things about using React, and it's usually difficult to get everyone to agree to props names. To make things easier, follow this convention to create consistent prop names based its underlying type (borrowed from [here](https://dlinau.wordpress.com/2016/02/22/how-to-name-props-for-react-components/)):
+Naming props is oddly one of the hardest things about using React, and it's usually difficult to get everyone to agree to props names. To make things easier, follow this convention to create consistent prop names based its underlying type (shamelessly borrowed from [here](https://dlinau.wordpress.com/2016/02/22/how-to-name-props-for-react-components/)):
 
 - **Array**: Plural noun eg. options, users
 - **Number**: Prefix with `num` or postfix with `count` eg. userCount, numUsers
@@ -574,9 +609,9 @@ Naming props is oddly one of the hardest things about using React, and it's usua
 - **Node or Element**: Suffix `node` or `element` eg. containerNode, containerElement
 - **Event**: Prefix with `on` eg. onSelect
 
-If you employ these rules, you should get on fine, just remember to name your props specifically for what they do, not how that use may be utilised by parent components.
+If you employ these rules, you should get on fine, just remember to name your props specifically for what they do, not how the component may be utilised by parent components.
 
-##### Be aware of options props (especially if not null checking)
+##### Be aware of optional props (especially if not null checking)
 
 If you aren't using `strictNullChecks`, then optional props could potentially catch you out, as the compiler won't recognise them as `null` or `undefined`. A classic example of this is optional event handlers, which are often not null checked in component code:
 
@@ -585,7 +620,7 @@ interface SelectorProps {
   onClick?: (value: string) => void;
 }
 
-const Selector = () => {
+const Selector = ({ onClick }: SelectorProps) => {
   
   const handleClick = (event: Event) => {
     onClick(event.value)
@@ -598,7 +633,7 @@ const selectorElement =  <Selector />
 
 ```
 
-In this example, we've created an instance of the `Selector` component without passing in an `onClick` prop, which is allowed as it's optional. If we click on the button will break, however, as `onClick` is not a function.
+In this example, we've created an instance of the `Selector` component without passing in an `onClick` prop, which is allowed as it's optional. If we click on the button it will break, however, as `onClick` is not a function. 
 
 To avoid this, we need to make sure that we're conditionally calling handlers:
 
@@ -607,7 +642,7 @@ interface SelectorProps {
   onClick?: (value: string) => void;
 }
 
-const Selector = () => {
+const Selector = ({ onClick }: SelectorProps) => {
   
   const handleClick = (event: Event) => {
     // use optional chaining (?.) to check if onClick is a function first
@@ -712,4 +747,10 @@ const accessObject = <U extends object>( object: U, key: keyof U ) => {
 }
 ```
 
-Now, we have a core object where we can define our functionality and derive types from it. This is very useful because we can put functionality first, assigning types to props that change to reflect the kind of functionality those props can support.
+Now, we have a core object where we can define our functionality and derive types from it. This is very useful because we can put functionality first, assigning types to components and functions based on the functionality that they support.
+
+### Summary
+
+So there you have it, the rules I would have followed if I could hop back in time and redo a year of React and TypeScript. Obviously, if I've unlocked the secrets of time travel, there are other more exciting things I'd do first, but all in good time. In general, I assume we'll invent time travel a lot faster if we all implement stronger typing in our code, though I think that's probably more of a Python use case.
+
+I've thoroughly enjoyed using React and TypeScript together, and I'm certain it's made me a better developer, as it's forced me to think more deeply about how an application actually comes together. Plus, it's caught a lot of my errors before somebody else catches wind in a PR, so my ego is thankful.
