@@ -11,7 +11,7 @@ After a year of building with TypeScript and React on a client engagement, it sh
 
 Broadly, the goals of this guide can be summed up as the following:
 
-> Guidance and design patterns that encourage the creation of easy to read, expressive React + TypeScript components, and repos that follow sensible and consistent rules, all in aid of minimising the intertia and cognitive load felt when moving around and between projects
+> Guidance and design patterns that encourage the creation of easy to read, expressive React + TypeScript components, and repos that follow sensible and consistent rules, all in aid of minimising the inertia and cognitive load felt when moving around and between projects
 
 **Before we go any further though**, it's worth pointing out that I've loved working with React and TypeScript, and I'd love to do it again. If I was asked to jump onto a vanilla JSX project right now I don't think my heart could take it, as I'm a firm believer that utilising TypeScript helped us to avoid a plethora of runtime errors, and forced us to consider how the application as a whole could (and more importantly *should*) come together. When TypeScript is used well it is a joy to work with, and makes our code easy to read and interpret. When it's used badly, however, it can be a nightmarish weight around your ankle, so hopefully this guide will prevent anyone who reads it from experiencing their own nightmare in the future.
 
@@ -25,7 +25,7 @@ I could go on forever about TypeScript and React good practice, and different wa
 
 ### TLDR
 
-I get it. You're busy. Here's the Cliff's notes. For those with a little more time, read on for the full breakdown of each rule.
+I get it. You're busy. Here's the Cliffs notes. For those with a little more time, read on for the full breakdown of each rule.
 
 - **Project Setup**
   - Perform strict null checks
@@ -60,7 +60,7 @@ That said, these guidelines should be applicable to any React and TypeScript pro
 
 Depending on how your project is setup, your `tsconfig` will vary, but having the strictest possible settings is a good idea, as it will ensure the greatest level of safety. [strictNullChecks](https://www.typescriptlang.org/tsconfig#strictNullChecks) is often overlooked, but can be very valuable, especially when building an application that retrieves data from an external source, and setting it up correctly at the beginning saves a lot of pain when trying to implement it into an existing codebase.
 
-When `strictNullChecks` is true in your configuration, `null` and `undefined` are distinct types, separate from a contrete type like `string` or `number`. This separation means that your application will need to have paths to handle data that could be `null` or `undefined`, which enforces better error handling. When using libraries like [Apollo Client](https://www.apollographql.com/docs/react/) and [SWR](https://swr.vercel.app/) to retrieve external data, this can be incredibly valuable as they will typically return a nullish value while the request is in flight, or when no data is found (in the case of GraphQL), which can easily result in errors.
+When `strictNullChecks` is true in your configuration, `null` and `undefined` are distinct types, separate from a concrete type like `string` or `number`. This separation means that your application will need to have paths to handle data that could be `null` or `undefined`, which enforces better error handling. When using libraries like [Apollo Client](https://www.apollographql.com/docs/react/) and [SWR](https://swr.vercel.app/) to retrieve external data, this can be incredibly valuable as they will typically return a nullish value while the request is in flight, or when no data is found (in the case of GraphQL), which can easily result in errors.
 
 Enable strict checks in your `tsconfig` compiler options like this:
 
@@ -74,7 +74,7 @@ Enable strict checks in your `tsconfig` compiler options like this:
 
 ##### Introspect your data sources
 
-If your application is recieving data from an external data source, then introspecting the schema to generate types to use in development can save a lot of time, as well as give you the added confidence of knowing exactly what your data looks like. This process involves converting the schema of the remote source into types and interfaces that can be stored locally and used in your local compilation. It is possible to manually maintain a types file, and this could be a better option if the remote schemas are very limited, but for larger sources introspecting is the way to go.
+If your application is receiving data from an external data source, then introspecting the schema to generate types to use in development can save a lot of time, as well as give you the added confidence of knowing exactly what your data looks like. This process involves converting the schema of the remote source into types and interfaces that can be stored locally and used in your local compilation. It is possible to manually maintain a types file, and this could be a better option if the remote schemas are very limited, but for larger sources introspecting is the way to go.
 
 There are lots of different libraries that can do this, but 2 commonly used and well maintained ones are [GraphQL Code Generator](https://www.graphql-code-generator.com/) (for GraphQL endpoints), and [Open API Generator](https://github.com/OpenAPITools/openapi-generator) (for REST endpoints that follow the Open API standard).
 
@@ -206,7 +206,7 @@ const View = ({ variant }: ViewProps) => {
 
 At the very beginning of the component, a union type is introduced by the different possible variants of the query. Simple union types, or those that share a very similar structure can be used, but typically it can become very difficult to understand the shape of the data as it progress through the component. Furthermore, it can be very hard to apply consistent logic as the data types diverge, and can result in variant-based mapping, which is hard to read and difficult to extend.
 
-To improve on this example, it makes sense to simply split the component out into consistent logic and variant-specific logic, and create multiple components to accomodate that split.
+To improve on this example, it makes sense to simply split the component out into consistent logic and variant-specific logic, and create multiple components to accommodate that split.
 
 ```tsx
 // we wrap the consistent logic into a hook
@@ -247,7 +247,7 @@ In this case, although we've introduced more components, the code itself is far 
 
 Adding JSDoc comments to your code as you build your components not only makes your work more readable for others, but it's also a great way to walk through the design process yourself, as it forces you to think about what you're adding and why. 
 
-When adding JSDoc comments, it's not always neccessary to document everything, as some props are self explanatory (like the `onClick` in the component below), but generally adding some comments can be a very useful and easy way to document as you build.
+When adding JSDoc comments, it's not always necessary to document everything, as some props are self explanatory (like the `onClick` in the component below), but generally adding some comments can be a very useful and easy way to document as you build.
 
 ```tsx
 interface MyComponentProps {
@@ -266,13 +266,13 @@ const MyComponent = ({ text, onClick }: MyComponentProps) => {
 };
 ```
 
-As an added bonus, if you're using VS Code (or any other IDE that supports JSDoc comments), you'll see your comments when you hover over the relevant item. This can be used to store quite detailed and descriptive documentation if required.
+As an added bonus, if you're using VS Code (or any other IDE that supports JSDoc comments), you'll see your comments when you hover over the relevant item. This can be used to store quite detailed and descriptive documentation if required.flogic
 
 ![JSDoc example](./jsdoc-example.png)
 
 ##### Keep your code declarative, and avoid configuration objects where possible
 
-One of the nice things about React and JSX is that it allows us to code in a declarative manner, rather than an imperitive manner - this typically results in code that follows a nice flow and is easy to read. As our applications and components become more complicated, however, it can be tempting to use configuration objects and presets to reduce the amount of code we need to write. This can be advantageous, but it can also have major impacts on the readability and flexibility of our code when applied to more complex systems.
+One of the nice things about React and JSX is that it allows us to code in a declarative manner, rather than an imperative manner - this typically results in code that follows a nice flow and is easy to read. As our applications and components become more complicated, however, it can be tempting to use configuration objects and presets to reduce the amount of code we need to write. This can be advantageous, but it can also have major impacts on the readability and flexibility of our code when applied to more complex systems.
 
 A simple example of this could be some kind of dropdown menu that contains options:
 
@@ -309,7 +309,7 @@ The second option is easier to read as it follows the kind of standard JSX patte
 
 It's also worth noting that in the example above, the gains were fairly minimal, because the object format was very simple, but configurations can potentially become incredibly complicated, with multiple nestings and different variations required. In those cases, it becomes substantially easier to work with declarative code as it's easier to break the problem up into smaller pieces.
 
-By using more advanced React patterns (such as utilising `React.children` or **Compound Components**, which won't be discussed here), it's possible to create incredibly flexible, reusable logic, that's still easy to read and extend.
+By using more advanced React patterns (such as utilising `React.children` or **Compound Components**, which won't be discussed here), it's possible to create incredibly flexible, reusable logic that's still easy to read and extend.
 
 The form example below shows how a complex component, with schema validation and multiple pages could be expressed using a declarative syntax:
 
@@ -369,7 +369,7 @@ The form example below shows how a complex component, with schema validation and
 
 ![Props design patterns](./props.jpg)
 
-Onto the home stretch now, Props! They may seem simple, but they're possibly one of the most contencious parts of a React TypeScript application, and since almost every code change will affect them somehow, it's good to have a clear approach laid out and agreed within your team.
+Onto the home stretch now, Props! They may seem simple, but they're possibly one of the most contentious parts of a React TypeScript application, and since almost every code change will affect them somehow, it's good to have a clear approach laid out and agreed within your team.
 
 ##### Avoid tying your props to a data source
 
@@ -456,11 +456,11 @@ const User = ({ fullName, profileUrl }: UserProps ) => {
 const userElement = <User fullName={data.data.core.firstName} profileUrl={data.data.images.profile.url}>
 ```
 
-In this case, our component is pure and has no ties to the data source itself, it's just up to us to correctly map the data when we use the component. This may seem like a small distinction, but now our components are completely decoupled, and our application is more resilliant to data changes. If the data structure does change, we just need to change how we pass that data into our components, rather than updating the components themselves.
+In this case, our component is pure and has no ties to the data source itself, it's just up to us to correctly map the data when we use the component. This may seem like a small distinction, but now our components are completely decoupled, and our application is more resilient to data changes. If the data structure does change, we just need to change how we pass that data into our components, rather than updating the components themselves.
 
 ##### Types should flow from children to parents, never the other way around
 
-Reusing types and interfaces saves time and aligns components, but doing it badly can cause things to go wrong very quickly. When sharing types across components, make sure that the child component informs the types of the parent, not the other way around. By ensuring that types flow from child to parent, components are always completely self-contained, and their types represent their own functionality. If a child uses a parent's type, then it becomes dependant on that parent, and is no longer self-contained.
+Reusing types and interfaces saves time and aligns components, but doing it badly can cause things to go wrong very quickly. When sharing types across components, make sure that the child component informs the types of the parent, not the other way around. By ensuring that types flow from child to parent, components are always completely self-contained, and their types represent their own functionality. If a child uses a parent's type, then it becomes dependent on that parent, and is no longer self-contained.
 
 ```tsx
 // the Parent component is completely independent from a type perspective
@@ -528,7 +528,7 @@ const Child = ({ onSelect, name, url }) => {
 }
 ```
 
-Following this pattern also generally makes for easier to navigate folder structures, as the types and functionality are typically flowing up towards to the root folder, rather than being lost in nested folders.
+Following this pattern also generally makes for easier to navigate folder structures, as the types and functionality are typically flowing up towards the root folder, rather than being lost in nested folders.
 
 ##### Give your interfaces consistent and descriptive names
 
