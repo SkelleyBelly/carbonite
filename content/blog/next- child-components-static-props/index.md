@@ -29,7 +29,7 @@ We also wanted to “weight” these results based on the specificity of the dat
 As I mentioned before, the solution involves *double rendering* the app during the static build of the page. But you can think of it happening in 3 main steps:
 
 1. On the first render we gather the data tags that we want to request, adding them to a global JavaScript variable. 
-2. Then we go and fetch the other content pages which also have these requested data tags and add the resultant content to the static props injected in the page for the 2nd render
+2. We go and fetch content pages which also have these data tags from the CMS. We then add these content pages to the static props injected in the page for the 2nd render
 3. These content pages are added to a context at the top level of the page which can then be consumed by the `RelatedBlog` or `RelatedProduct` child components
 
 #### 1. Gather Requested Data Tags:
