@@ -26,7 +26,7 @@ We also wanted to “weight” these results based on the specificity of the dat
 
 #### How we did it:
 
-As I mentioned before, the solution involves *double rending* the app during the static build of the page. But you can think of it happening in 3 main steps:
+As I mentioned before, the solution involves *double rendering* the app during the static build of the page. But you can think of it happening in 3 main steps:
 
 1. On the first render we gather the data tags that we want to request, adding them to a global JavaScript variable. 
 2. Then we go and fetch the other content pages which also have these requested data tags and add the resultant content to the static props injected in the page for the 2nd render
