@@ -197,7 +197,7 @@ export async function getStaticPaths() {
 
 #### 3. Add data to a context so that it can be accessed by child components
 
-On the last code snippet you will see that we are wrapping the page in “withRelated()”, this is a HOC which wraps the page in a context, passing it the related story results.
+In the last code snippet you will see that we are wrapping the page in “withRelated()”, this is a HOC which wraps the page in a context. We pass the the related story results into the context provider so it can be accessed by any child component.
 
 This simple context shown in the snippet below:
 
@@ -220,7 +220,7 @@ export default withRelated;
 
 If you then go back and see the first code snippet in this article, you will see that when this `related-stories.js` is rendered the second time it will have found all the data tags needed within the “RelatedStoriesContext”.
 
-We then aggregate all the results, refining them into one de-duped array of in this case blog content articles sorted by “relevance score”. We can then use the following component to render them accordingly:
+We then aggregate all the results, refining them into one de-duped array of, in this case, blog content articles sorted by “relevance score”. We can then use the following component to render them. We are just showing the three with the highest relevance.
 
 ```js
 // components/RelatedBlogs.js
@@ -251,6 +251,6 @@ export default RelatedBlogs;
 
 #### Conclusion:
 
-With this solution you can see that the limitation of not being able to run `getStaticProps` on child components isn’t really a blocker. By double rendering the component during static build you can gather the required data for the child components within your top level `getStaticProps` which can then be passed down to your child components.
+With this solution you can see that the limitation of not being able to run `getStaticProps` on child components isn’t really a blocker. By double rendering the component during static build, you can gather the data required for the child components within your top level `getStaticProps`. This data can then be passed down and access by any of your child component via use of the context.
 
 As the adoption of Next.js static websites grows I can see this being a very useful pattern in various use cases. I hope this article helps but also feel free to reach out to [me](mailto:samuel.hopkins@and.digital) if you have any queries.
