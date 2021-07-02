@@ -82,9 +82,9 @@ export default function RelatedStories({
 
 #### 2. Fetch the content related to the requested data tags:
 
-Now in the next code snippet, you can see how we have triggered that initial render using `ReactDOMServer.renderToStaticMarkup(...);`. After this initial render we can extract the requested data tags from the global object and make a call to our CMS to go and get all of the “stories” (content pages) that have these data tags. 
+Now in the next code snippet, you can see how we have triggered that initial render using `ReactDOMServer.renderToStaticMarkup(...);`. After this initial render we have the requested data tags in the global object. We then take these tags and make a call to our CMS to get all of the “stories” (content pages) that also have these data tags. 
 
-When all the results are returned we add our related products and our related blogs to the props object, which gets returned from this function.
+When all the content page results are returned we add our related products and our related blogs to the props object, which gets returned from this function.
 
 ```js
 // get-related-stories-static-props.js
